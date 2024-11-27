@@ -1,6 +1,5 @@
-import React, { memo, useCallback } from "react";
+import React, { useCallback } from "react";
 import { Path } from "react-native-svg";
-import differenceWith from "ramda/src/differenceWith";
 
 import { bodyFront } from "./assets/bodyFront";
 import { bodyBack } from "./assets/bodyBack";
@@ -33,7 +32,10 @@ export type Slug =
   | "tibialis"
   | "trapezius"
   | "triceps"
-  | "upper-back";
+  | "upper-back"
+  | "lats"
+  | "abductors"
+  | "hip-flexors";
 
 export interface BodyPart {
   color?: string;
@@ -88,7 +90,10 @@ const Body = ({
         return { ...d, color: colors[colorIntensity - 1] };
       });
 
-      const formattedBodyParts = differenceWith(comparison, dataSource, data);
+      // Leave only the body parts that are not in the data
+      const formattedBodyParts = dataSource.filter(
+        (d) => !data.find((e) => comparison(e, d))
+      );
 
       return [...formattedBodyParts, ...coloredBodyParts];
     },
