@@ -34,5 +34,17 @@
     "react-native-typescript-transformer": "^1.2.13",
     "typescript": "^5.6.3"
   },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "description": "Modified version of react-native-body-highlighter for GymNotes app",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zvavy/react-native-body-highlighter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zvavy/react-native-body-highlighter/issues"
+  },
+  "homepage": "https://github.com/zvavy/react-native-body-highlighter#readme"
 }
